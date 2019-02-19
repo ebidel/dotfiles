@@ -9,8 +9,8 @@
   lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lg3 = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit --no-merges
   undopush = !"git push -f origin HEAD^:master"
-  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/stable"
   pum = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  rub = !"git fetch upstream -v; git rebase upstream/master"
   contribs = shortlog -s -n --since=2013-01-01
   credit = !sh -c 'git commit --amend --author \"$1\" -C HEAD' -
   pushdevrel = !"git push origin HEAD:refs/for/master"
@@ -31,7 +31,5 @@
 [user]
 	name = Eric Bidelman
 	email = ebidel@gmail.com
-[url "persistent-https://devrel-review.git.corp.google.com"]
-	insteadOf = https://devrel-review.git.corp.google.com
 [commit]
 	gpgsign = false
