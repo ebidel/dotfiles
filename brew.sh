@@ -14,9 +14,10 @@ brew install brotli
 brew install gh
 brew install hyperfine
 brew install --cask iterm2
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install jq
 brew install k6
-brew install jandedobbeleer/oh-my-posh/oh-my-posh
+brew install python
 brew install rectangle
 
 brew tap bramstein/webfonttools
