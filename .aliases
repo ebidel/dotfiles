@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Shortcuts
+alias dt="cd ~/Desktop"
+alias src="cd ~/src"
+alias g="git"
+alias ls='ls -GFh'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Chrome & remote debugging
+alias remotedebug="adb forward tcp:9222 localabstract:chrome_devtools_remote"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+# Bun
+alias b="bun"
+
+# PNPM
+alias pn='pnpm'
+alias pnpx='pnpm dlx'
+alias pnx='pnpm exec'

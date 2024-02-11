@@ -1,6 +1,4 @@
-# Compiled source #
-###################
-
+# Compiled source
 *.com
 *.class
 *.dll
@@ -10,10 +8,7 @@
 *.sass-cache
 *.pyc
 
-
-# OS generated files #
-######################
-
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -21,3 +16,13 @@
 .Trashes
 Icon?
 ehthumbs.db
+
+# Vercel
+.vercel
+.turbo
+.next
+
+# Misc
+.env
+.coverage
+.cache

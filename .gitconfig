@@ -1,23 +1,35 @@
+[user]
+	name = Eric Bidelman
+	email = ebidel@gmail.com
 [github]
   user = ebidel
+  email = ebidel@gmail.com
 [alias]
-  st = status
+  # List aliases.
+	aliases = config --get-regexp alias
+  st = status -s
   ci = commit
   br = branch
   co = checkout
+  # Clone a repository including all submodules.
+	c = clone --recursive
   lg = log --stat --format=\"%n%Cred%h  %Cgreen%an%Creset  %ar%n%s%B\"
   lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lg3 = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit --no-merges
-  undopush = !"git push -f origin HEAD^:master"
-  pum = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
-  rub = !"git fetch upstream -v; git rebase upstream/master"
-  contribs = shortlog -s -n --since=2013-01-01
+  undopush = !"git push -f origin HEAD^:main"
+  pum = !"git fetch origin -v; git fetch upstream -v; git merge upstream/main"
+  rub = !"git fetch upstream -v; git rebase upstream/main"
+  # List contributors since date. git contributors 2024-01-01 
+  contributors = "!f() { git shortlog -s -n --since=$1; }; f"
   credit = !sh -c 'git commit --amend --author \"$1\" -C HEAD' -
-  pushdevrel = !"git push origin HEAD:refs/for/master"
+  # Show the user email for the current repository.
+	whoami = config user.email
 [core]
-	excludesfile = /Users/ericbidelman/.gitignore
-[url "https://github"]
-	insteadOf = git://github
+	# Use custom `.gitignore` and `.gitattributes`.
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+[url "git@github.com:"]
+  insteadOf = https://github.com
 [credential]
 	helper = osxkeychain
 [push]
@@ -27,9 +39,6 @@
 [pull]
 	default = current
 [http]
-	cookiefile = /Users/ericbidelman/.gitcookies
-[user]
-	name = Eric Bidelman
-	email = ebidel@gmail.com
+	cookiefile = ~/.gitcookies
 [commit]
 	gpgsign = false
