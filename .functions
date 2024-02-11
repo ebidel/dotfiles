@@ -43,7 +43,7 @@ function serve() {
   then
     port=8000
   fi
-  open http://localhost:$port && python -m SimpleHTTPServer $port;
+  open http://localhost:$port && python3 -m http.server $port;
 }
 
 # take this repo and copy it to somewhere else minus the .git stuff.
