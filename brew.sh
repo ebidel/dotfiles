@@ -11,6 +11,7 @@ brew upgrade
 # Install useful tools.
 brew install alfred
 brew install brotli
+brew install expo-orbit
 brew install gh
 brew install hyperfine
 brew install --cask iterm2
