@@ -10,6 +10,7 @@ brew upgrade
 
 # Install useful tools.
 brew install alfred
+brew install --cask android-studio
 brew install brotli
 brew install expo-orbit
 brew install gh
