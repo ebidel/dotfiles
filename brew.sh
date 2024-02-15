@@ -21,6 +21,7 @@ brew install jq
 brew install k6
 brew install python
 brew install rectangle
+brew install --cask screen-studio
 
 brew tap bramstein/webfonttools
 brew install woff2
