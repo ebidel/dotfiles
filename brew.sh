@@ -15,6 +15,7 @@ brew install brotli
 brew install expo-orbit
 brew install gh
 brew install hyperfine
+brew install --cask imageoptim
 brew install --cask iterm2
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install jq
