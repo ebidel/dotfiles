@@ -18,6 +18,7 @@ brew install hyperfine
 brew install --cask imageoptim
 brew install --cask iterm2
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
+brew install --cask font-fira-code-nerd-font
 brew install jq
 brew install k6
 brew install python
