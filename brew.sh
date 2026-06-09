@@ -29,6 +29,8 @@ brew install http-server
 brew tap bramstein/webfonttools
 brew install woff2
 
+brew install oven-sh/bun/bun
+
 brew install starship
 brew install --cask ghostty
 brew install --cask claude
