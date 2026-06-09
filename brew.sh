@@ -29,5 +29,11 @@ brew install http-server
 brew tap bramstein/webfonttools
 brew install woff2
 
+brew install starship
+brew install --cask ghostty
+brew install --cask claude
+brew install --cask claude-code
+brew install --cask cmux
+
 # Remove outdated versions from the cellar.
 brew cleanup
