@@ -9,21 +9,29 @@
 	aliases = config --get-regexp alias
   st = status -s
   ci = commit
-  br = branch
   co = checkout
+  br = branch
+  # list branches sorted by last modified
+  b = "!git for-each-ref --sort='authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
   # Clone a repository including all submodules.
-	c = clone --recursive
+  c = clone --recursive
   lg = log --stat --format=\"%n%Cred%h  %Cgreen%an%Creset  %ar%n%s%B\"
   lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lg3 = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit --no-merges
+  # one-line log
+  lg = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg3 = log --stat --format=\"%n%Cred%h  %Cgreen%an%Creset  %ar%n%s%B\"
+  # List contributors since date. git contributors 2026-03-24
+  contribs = "!f() { git shortlog -s -n --since=$1; }; f"
+  # List contributors since date. git contributors 2024-01-01 
+  credit = !sh -c 'git commit --amend --author \"$1\" -C HEAD' -
   undopush = !"git push -f origin HEAD^:main"
   pum = !"git fetch origin -v; git fetch upstream -v; git merge upstream/main"
   rub = !"git fetch upstream -v; git rebase upstream/main"
-  # List contributors since date. git contributors 2024-01-01 
-  contributors = "!f() { git shortlog -s -n --since=$1; }; f"
-  credit = !sh -c 'git commit --amend --author \"$1\" -C HEAD' -
   # Show the user email for the current repository.
-	whoami = config user.email
+  whoami = config user.email
+  wl = worktree list
 [core]
 	# Use custom `.gitignore` and `.gitattributes`.
 	excludesfile = ~/.gitignore
