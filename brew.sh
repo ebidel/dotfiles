@@ -37,6 +37,7 @@ brew install --cask ghostty
 brew install --cask claude
 brew install --cask claude-code
 brew install --cask cmux
+brew install --cask caffeine
 
 # Remove outdated versions from the cellar.
 brew cleanup
