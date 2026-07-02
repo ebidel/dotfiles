@@ -38,6 +38,7 @@ brew install --cask claude
 brew install --cask claude-code
 brew install --cask cmux
 brew install --cask caffeine
+brew install --cask wispr-flow
 
 # Remove outdated versions from the cellar.
 brew cleanup
