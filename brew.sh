@@ -26,6 +26,7 @@ brew install python
 brew install rectangle
 brew install --cask screen-studio
 brew install http-server
+brew install ncdu
 
 brew tap bramstein/webfonttools
 brew install woff2
@@ -39,6 +40,7 @@ brew install --cask claude-code
 brew install --cask cmux
 brew install --cask caffeine
 brew install --cask wispr-flow
+brew install --cask superwhisper
 
 # Remove outdated versions from the cellar.
 brew cleanup
